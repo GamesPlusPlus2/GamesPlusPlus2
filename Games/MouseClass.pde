@@ -1,0 +1,8 @@
+class Mouse
+{
+  void display()
+  {
+  }
+}
+
+

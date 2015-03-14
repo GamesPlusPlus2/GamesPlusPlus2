@@ -1,0 +1,6 @@
+class Plant
+{
+  void display()
+  {
+  }
+}

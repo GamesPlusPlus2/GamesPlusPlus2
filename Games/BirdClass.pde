@@ -1,0 +1,7 @@
+class Bird
+{
+  void display()
+  {
+  }
+  
+}
