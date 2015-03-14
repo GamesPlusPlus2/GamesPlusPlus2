@@ -27,14 +27,25 @@ void setup()
   Tree = loadImage("Tree 100x100");
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+  
+>>>>>>> 6d43f3e1d429d88231fd0be8b3b9762cc98f2ac3
 }
 
 void draw()
 {
+<<<<<<< HEAD
 
   Map gameMap = new Map(10, 10, true);
   // map.generate();
   //map.display();
+=======
+    Map gameMap = new Map(10,10,true);
+gameMap.generate();
+  gameMap.display();
+  gameMap.update();
+>>>>>>> 6d43f3e1d429d88231fd0be8b3b9762cc98f2ac3
 }
 
