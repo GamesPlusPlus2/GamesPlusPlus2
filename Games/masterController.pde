@@ -5,12 +5,14 @@ class MasterController {
   MainMenu mainMenu;
   MusicController musicController;
   InputController inputController;
+  GameController gameController;
 
   MasterController() {
     state = mainMenuState;
     mainMenu = new MainMenu();
     musicController = new MusicController();
     inputController = new InputController();
+    gameController = new GameController();
   }
 
   void setGameName(String name) {
@@ -29,10 +31,13 @@ class MasterController {
       setState(mainMenu.update());
       break;
       //gameState
-    case 2:
+      //change to 2 once cutscenes are thing
+    case 1:
+      gameController.run();
+      print("test");
       musicController.gameMusic();
-      
       break;
     }
   }
 }
+

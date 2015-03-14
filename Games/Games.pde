@@ -2,7 +2,7 @@ import ddf.minim.*;
 
 Minim soundtrack;
 
-MasterController masterController = new MasterController();
+MasterController masterController;
 
 final int mainMenuState = 0;
 final int introState = 1;
@@ -30,8 +30,9 @@ PImage Tree;
 void setup() 
 {
   soundtrack = new Minim(this);
-  preferences();
   loadImages();
+  masterController = new MasterController();
+  preferences();
 }
 
 void draw() 

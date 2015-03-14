@@ -1,6 +1,8 @@
 class GameController {
   Map gameMap;
-  GameController() {
+  
+  GameController() 
+  {
     gameMap = new Map(50, 50, true);
     gameMap.generate();
   }

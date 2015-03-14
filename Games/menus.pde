@@ -22,14 +22,15 @@ void loadImages() {
   blank = loadImage("Object.png");
   grassFloor = loadImage("Grass Floor 800x800.jpg");
   woodFloor = loadImage("Wood Floor 800x800.jpg");
-  Bird = loadImage("Bird 100x100");
-  Cat = loadImage("Cat 100x100");
-  Chair = loadImage("Chair 100x100");
-  Girl = loadImage("Girl 100x100");
-  Mouse = loadImage("Mouse 100x100");
-  Plant = loadImage("Plant 100x100");
-  Rock = loadImage("Rock 100x100");
-  Tree = loadImage("Tree 100x100");
+  Bird = loadImage("Bird 100x100.png");
+  Cat = loadImage("Cat 100x100.gif");
+  Chair = loadImage("Chair 100x100.jpg");
+  Girl = loadImage("Girl 100x100.png");
+  Mouse = loadImage("Mouse 100x100.jpg");
+  Plant = loadImage("Plant 100x100.gif");
+  Rock = loadImage("Rock 100x100.gif");
+  Tree = loadImage("Tree 100x100.jpg");
+  
 }
 
 
