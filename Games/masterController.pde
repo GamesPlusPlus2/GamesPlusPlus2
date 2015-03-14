@@ -4,10 +4,12 @@ class MasterController {
   String gameName;
 
   MainMenu mainMenu;
+  MusicController musicController;
 
   MasterController() {
     state = mainMenuState;
     mainMenu = new MainMenu();
+    musicController = new MusicController();
   }
 
   void setGameName(String name) {
@@ -25,7 +27,9 @@ class MasterController {
       mainMenu.display();
       setState(mainMenu.update());
       break;
+    case 2:
+      musicController.gameMusic();
+      break;
     }
   }
 }
-

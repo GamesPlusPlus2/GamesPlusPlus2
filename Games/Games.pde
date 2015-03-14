@@ -1,17 +1,23 @@
+import ddf.minim.*;
+
+Minim soundtrack = new Minim(this);
+
 MasterController masterController = new MasterController();
 
 final int mainMenuState = 0;
 final int introState = 1;
 final int gameState = 2;
 final int pauseState = 3;
-final int endState = 4;
+final int winState = 4;
+final int loseState = 5;
 
 void setup() 
 {
-  preferences();  
+  preferences();
 }
 
 void draw() 
 {
   masterController.run();
 }
+
