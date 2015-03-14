@@ -24,7 +24,8 @@ class Map
     {
       ground = woodFloor;
     }
-    map = new Tile [cols] [rows];
+    
+    map = new Tile [cols][rows];
 
     image(ground, 0, 0);
 
@@ -34,10 +35,17 @@ class Map
       for (int j = 0; j < rows; j++)
       {
         map[i][j] = new Tile();
-        println(10*i+j);
+        //println(10*i+j);
       }
     }
+    
   }
+
+  void generate()
+  {
+    
+  }
+<<<<<<< HEAD
   //for the generation of random variables
   void generate()
   {      
@@ -45,6 +53,25 @@ class Map
   }
 
 
+=======
+  void display()
+  {
+    for (int i = 0; i < cols; i++)
+    {
+      for (int j = 0; j < rows; j++)
+      {
+        map[i][j].display(i, j); //displays each individual tile
+      }
+    }
+  }
+  void update()
+  {
+    
+  }
+  
+  
+    
+>>>>>>> origin/master
 
   //    void display()
   //    {
