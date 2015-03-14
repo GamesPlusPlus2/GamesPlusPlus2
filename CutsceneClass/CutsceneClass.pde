@@ -11,20 +11,22 @@ class Cutscene
   
   void plotIntroText() 
   {
-    backgroundColor();
+  backgroundColor();
+  image(cat2,0,0);
     
   textAlign(CENTER);
   textFont(font, 16);
-  text("One day in the land of Tiruk, disaster struck in the peaceful catdom of Kadrak. The",420,350);
-  text("king's favorite yarn and beautiful daughter had been catnapped by an evil sorceress.",420,375);
-  text("A valiant knight travelled to save the princess from the evil sorceress' tower. The",420,400);
-  text("sorceress knew that the knight would try to rescue the princess and she used her evil",420,425);
-  text("voodoo powers to enchant and animate objects to stop the knight on his quest.",420,450);
+  text("One day in the land of Tiruk, disaster struck in the peaceful catdom of Kadrak. The",275,200);
+  text("king's favorite yarn and beautiful daughter had been catnapped by an evil sorceress.",275,225);
+  text("A valiant knight travelled to save the princess from the evil sorceress' tower. The",275,250);
+  text("sorceress knew that the knight would try to rescue the princess and she used her evil",275,275);
+  text("voodoo powers to enchant and animate objects to stop the knight on his quest.",275,300);
   }
   
   void plotEndingText() 
   {
-    backgroundColor();
+  backgroundColor();
+  image(cat1,150,600,100,100);
     
   textAlign(CENTER);
   textFont(font, 18);
@@ -34,8 +36,6 @@ class Cutscene
   text("decided to go back home and relax and take over the internet.",420,400);
   text("THE END... or is it?",420,425);
   text("Nah, it's the end.",420,475);
-  
-  image(cat1, 150, 600,100, 100);
   }
   
   void plotYouLoseText() 

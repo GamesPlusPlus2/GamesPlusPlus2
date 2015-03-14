@@ -1,7 +1,7 @@
 Cutscene myCutscene;
 PFont font;
 
-PImage cat1;
+PImage cat1, cat2;
 
 void setup() 
 {
@@ -11,12 +11,12 @@ void setup()
   font = createFont("Times New Roman",16,true);
   
   cat1 = loadImage("Cat1.png");
+  cat2 = loadImage("Cat2.png");
 }
 
 void draw() 
 {
-  //myCutscene.backgroundColor();
-  //myCutscene.plotIntroText();
+  myCutscene.plotIntroText();
   myCutscene.plotEndingText();
-  //myCutscene.plotYouLoseText();
+  myCutscene.plotYouLoseText();
 }
