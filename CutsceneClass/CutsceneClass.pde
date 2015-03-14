@@ -11,6 +11,8 @@ class Cutscene
   
   void plotIntroText() 
   {
+    backgroundColor();
+    
   textAlign(CENTER);
   textFont(font, 16);
   text("One day in the land of Tiruk, disaster struck in the peaceful catdom of Kadrak. The",420,350);
@@ -22,6 +24,8 @@ class Cutscene
   
   void plotEndingText() 
   {
+    backgroundColor();
+    
   textAlign(CENTER);
   textFont(font, 18);
   text("After the cats finally reached to the evil sorceress, they realized she was just a cute",420,325);
@@ -30,11 +34,14 @@ class Cutscene
   text("decided to go back home and relax and take over the internet.",420,400);
   text("THE END... or is it?",420,425);
   text("Nah, it's the end.",420,475);
-  text("Good use of cats, right?",420,500);
+  
+  image(cat1, 150, 600,100, 100);
   }
   
   void plotYouLoseText() 
   {
+    backgroundColor();
+    
   textAlign(CENTER);
   textFont(font, 32);
   text("Congratulations! You lose!",420,375);
