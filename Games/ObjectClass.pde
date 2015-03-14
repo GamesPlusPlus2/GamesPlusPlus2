@@ -48,7 +48,42 @@ class Cat extends Tile implements Moveable
   }
   void move()
   {
-   
+    if (keyPressed) 
+    {
+      switch(key) 
+      {
+      case 'w':
+      case 'W':
+        moveUp = true;
+        moveRight = false;
+        moveDown = false;
+        moveLeft = false;
+        break;
+      case 'd':
+      case 'D':
+        moveUp = false;
+        moveRight = true;
+        moveDown = false;
+        moveLeft = false;
+        break;
+      case 's':
+      case 'S':
+        moveUp = false;
+        moveRight = false;
+        moveDown = true;
+        moveLeft = false;
+        break;
+      case 'a':
+      case 'A':
+        moveUp = false;
+        moveRight = false;
+        moveDown = false;
+        moveLeft = true;
+        break;
+      default:
+        break;
+      }
+    }
   }
 }
 
