@@ -1,19 +1,23 @@
 class GameController {
   int state;
-  MainMenu mainMenu;
   int mainMenuState = 0;
+
+  MainMenu mainMenu;
+
   GameController() {
-    state = 0;
+    state = mainMenuState;
     mainMenu = new MainMenu();
   }
 
-  void setState(int n) {
-    state = mainMenuState;
+  void setGameName(String name) {
+   gameName = name; 
   }
-  
+  void setState(int n) {
+    state = n;
+  }
+
   void run() {
     switch(state) {
-      //main menu
     case mainMenuState:
       mainMenu.display();
       break;
