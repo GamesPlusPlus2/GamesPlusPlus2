@@ -1,17 +1,14 @@
-GameController gameController = new GameController();
-
-int mainMenuState = 0;
-int introState = 1;
-int gameState = 2;
-int pauseState = 3;
-int endState = 4;
-
-void setup() 
-{
-  preferences();  
+void setup() {
+  size(800, 800);
+  colorMode(HSB, 360, 100, 100, 100);
+  background(360);
+  fill(0);
+  textAlign(CENTER);
+  textSize(50);
+  text("Cat Rescue Simulator 2015", width/2, height/4);
+  print(PFont.list());
 }
 
-void loop() 
-{
-  gameController.run();
+void loop() {
+  
 }
