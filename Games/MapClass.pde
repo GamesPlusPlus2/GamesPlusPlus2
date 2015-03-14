@@ -27,7 +27,7 @@ class Map
     
     map = new Tile [cols][rows];
 
-    
+    image(ground, 0, 0);
 
     //fills the map with a ground
     for (int i = 0; i < cols; i++)
@@ -43,7 +43,7 @@ class Map
   void generate() //to do
   {
     int x, y;
-    map[8][rows/2] = new Cat();
+    map[0][rows/2] = new Cat();
     
     if (isOutside)
     {
@@ -58,7 +58,7 @@ class Map
         }
       }
       //plants
-      for(float amount = random(1, 5); amount >= 0; amount --)
+      for(float amount = random(1, 15); amount >= 0; amount --)
       {
         x = (int) random(cols);
         y = (int) random(rows);
@@ -68,7 +68,7 @@ class Map
         }
       }
       //birds
-      for(float amount = random(1, 3); amount >= 0; amount --)
+      for(float amount = random(1, 10); amount >= 0; amount --)
       {
         x = (int) random(cols);
         y = (int) random(rows);
@@ -78,7 +78,7 @@ class Map
         }
       }
       //rocks
-      for(float amount = random(1, 5); amount >= 0; amount --)
+      for(float amount = random(1, 10); amount >= 0; amount --)
       {
         x = (int) random(cols);
         y = (int) random(rows);
@@ -88,7 +88,7 @@ class Map
         }
       }
       //mice
-      for(float amount = random(1, 5); amount >= 0; amount --)
+      for(float amount = random(1, 10); amount >= 0; amount --)
       {
         x = (int) random(cols);
         y = (int) random(rows);
@@ -134,12 +134,11 @@ class Map
   }
   void display()
   {
-    image(ground, 0, 0);
     for (int i = 0; i < cols; i++)
     {
       for (int j = 0; j < rows; j++)
       {
-        map[i][j].display((i * width/cols)-50, (j * height/rows)-50); //displays each individual tile
+        map[i][j].display(i * width/cols, j * height/rows); //displays each individual tile
       }
     }
   }
