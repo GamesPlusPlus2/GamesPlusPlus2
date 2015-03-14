@@ -42,9 +42,14 @@ class Map
     
   }
 
-  void generate()
+  void generate() //to do
   {
-    
+    map[0][rows/2] = new Cat();
+//    int i =5;
+//     while ( i > 0)
+//    {
+//      i++;
+//    } 
   }
   void display()
   {
@@ -58,7 +63,36 @@ class Map
   }
   void update()
   {
-    
+    for (int i = 0; i < cols; i++)
+    {
+      for (int j = 0; j < rows; j++)
+      {
+        Tile item = map[i][j];
+        if(item instanceof Moveable)
+        {
+          //println(item.charName);
+          if (item.moveUp && map[i][j-1].charName == 'g')
+          {
+            map[i][j-1] = item;
+          }
+          if (item.moveDown && map[i][j+1].charName == 'g')
+          {
+            map[i][j+1] = item;
+          }
+          if (item.moveLeft && map[i-1][j].charName == 'g')
+          {
+            map[i-1][j] = item;
+          }
+          else if (item.moveRight && map[i+1][j].charName == 'g')
+          {
+            map[i+1][j] = item;
+          }
+          else
+            break;
+          item = new Tile();
+        }
+      }
+    }
   }
   
   

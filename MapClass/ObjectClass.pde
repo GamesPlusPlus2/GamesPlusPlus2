@@ -1,5 +1,11 @@
 class Tile
 {
+  //ugly but it works :P
+  boolean moveUp = false;
+  boolean moveDown = false;
+  boolean moveLeft = false;
+  boolean moveRight = false;
+  
   char charName;
   PImage picture;
   
