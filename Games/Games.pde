@@ -1,9 +1,9 @@
-GameController gameController = new GameController();
+Controller controller = new Controller();
 
 void setup() {
   preferences();  
 }
 
 void loop() {
-  gameController.run();
+  controller.run();
 }

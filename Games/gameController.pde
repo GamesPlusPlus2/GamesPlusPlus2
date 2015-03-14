@@ -1,10 +1,10 @@
-class GameController {
+class Controller {
   int state;
   int mainMenuState = 0;
 
   MainMenu mainMenu;
 
-  GameController() {
+  Controller() {
     state = mainMenuState;
     mainMenu = new MainMenu();
   }
