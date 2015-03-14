@@ -43,7 +43,7 @@ class Map
   void generate() //to do
   {
     int x, y;
-    map[8][rows/2] = new Cat();
+    map[8][rows/2] = cat;
     
     if (isOutside)
     {
@@ -139,7 +139,7 @@ class Map
     {
       for (int j = 0; j < rows; j++)
       {
-        map[i][j].display((i * width/cols)-50, (j * height/rows)-50); //displays each individual tile
+        map[i][j].display(i, j); //displays each individual tile
       }
     }
   }
