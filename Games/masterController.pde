@@ -10,6 +10,7 @@ class MasterController {
     state = mainMenuState;
     mainMenu = new MainMenu();
     musicController = new MusicController();
+    inputController = new InputController();
   }
 
   void setGameName(String name) {
@@ -27,8 +28,10 @@ class MasterController {
       mainMenu.display();
       setState(mainMenu.update());
       break;
+      //gameState
     case 2:
       musicController.gameMusic();
+      
       break;
     }
   }

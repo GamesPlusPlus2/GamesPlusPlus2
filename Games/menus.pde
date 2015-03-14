@@ -1,7 +1,9 @@
 void preferences() 
 {
   masterController.setGameName("Cat Rescue Simulator 2015");
-  size(800, 800);
+  myWidth = 800;
+  myHeight = 800;
+  size(myWidth, myHeight);
 }
 
 boolean buttonCenter(int x, int y, int w, int h) 
