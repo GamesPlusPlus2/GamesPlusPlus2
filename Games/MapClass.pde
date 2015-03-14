@@ -7,8 +7,7 @@ class Map
 
   PImage ground;
 
-  int catlocx;
-  int catlocy;
+
   //constructor
   Map(int c, int r, boolean o)
   {
@@ -45,8 +44,6 @@ class Map
   {
     int x, y;
     map[8][rows/2] = new Cat();
-    catlocx = 8;
-    catlocy = rows/2;
     
     if (isOutside)
     {
@@ -148,43 +145,36 @@ class Map
   }
   void update()
   {
-//    for (int i = 0; i < cols; i++)
-//    {
-//      for (int j = 0; j < rows; j++)
-//      {
-        //Tile item = map[i][j];
-        Tile item = map[catlocx][catlocy];
+    for (int i = 0; i < cols; i++)
+    {
+      for (int j = 0; j < rows; j++)
+      {
+        Tile item = map[i][j];
         if(item instanceof Moveable)
         {
           //println(item.charName);
-          if (item.moveUp){
-            print("UP");
-           if (map[i][j-1].charName == 'g')
+          if (item.moveUp && map[i][j-1].charName == 'g')
           {
             map[i][j-1] = item;
-            catloxy-=1;
-          }}
+          }
           if (item.moveDown && map[i][j+1].charName == 'g')
           {
             map[i][j+1] = item;
-            catlocy+=1;
           }
           if (item.moveLeft && map[i-1][j].charName == 'g')
           {
             map[i-1][j] = item;
-            catlocx-=1;
           }
           else if (item.moveRight && map[i+1][j].charName == 'g')
           {
             map[i+1][j] = item;
-            catlocx+=1;
           }
           else
             break;
           item = new Tile();
         }
       }
-  //  }
-//  }
+    }
+  }
 }
 
