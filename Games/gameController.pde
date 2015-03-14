@@ -4,7 +4,7 @@ class GameController {
   
   GameController() 
   {
-    gameMap = new Map(50, 50, true);
+    gameMap = new Map(50, 50, false);
     gameMap.generate();
   }
   

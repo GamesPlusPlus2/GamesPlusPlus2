@@ -26,10 +26,10 @@ void loadImages() {
   Cat = loadImage("Cat 100x100.gif");
   Chair = loadImage("Chair 100x100.jpg");
   Girl = loadImage("Girl 100x100.png");
-  Mouse = loadImage("Mouse 100x100.jpg");
+  Mouse = loadImage("Mouse 100x100.png");
   Plant = loadImage("Plant 100x100.gif");
   Rock = loadImage("Rock 100x100.gif");
-  Tree = loadImage("Tree 100x100.jpg");
+  Tree = loadImage("Tree 100x100.png");
   
 }
 
