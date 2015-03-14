@@ -1,3 +1,4 @@
+
 class Tile
 {
   //ugly but it works
@@ -18,7 +19,7 @@ class Tile
   {
     if(charName != 'g')
       text(charName, x, y);
-    image(picture, x, y);
+    image(picture, x, y, width/10, height/10);
   }
 }
 
@@ -32,7 +33,7 @@ class Bird extends Tile implements Moveable
   Bird()
   {
     charName = 'b';
-    //picture = Bird;
+    picture = bird;
   }
   void move()
   {
@@ -45,7 +46,7 @@ class Cat extends Tile implements Moveable
   Cat()
   {
     charName = 'c';
-    //picture = Cat;
+    picture = cat;
   }
   void move()
   {
@@ -71,7 +72,7 @@ class Furniture extends Tile
   Furniture()
   {
     charName = 'f';
-    //picture = Chair;
+    picture = chair;
   }
 }
 
@@ -80,7 +81,7 @@ class Human extends Tile implements Moveable
   Human()
   {
     charName = 'h';
-    //picture = Girl;
+    picture = girl;
   }
   void move()
   {
@@ -111,7 +112,7 @@ class Mouse extends Tile implements Moveable
   Mouse()
   {
     charName = 'm';
-    //picture = Mouse;
+    picture = mouse;
   }
   void move()
   {
@@ -124,7 +125,7 @@ class Plant extends Tile
   Plant()
   {
     charName = 'p';
-    //picture = Plant;
+    picture = plant;
   }
 }
 
@@ -133,7 +134,7 @@ class Rock extends Tile
   Rock()
   {
     charName = 'r';
-    //picture = Rock;
+    picture = rock;
   }
 }
 
@@ -142,7 +143,7 @@ class Tree extends Tile
   Tree()
   {
     charName = 't';
-    //picture = Tree;
+    picture = tree;
   }
 }
 

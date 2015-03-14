@@ -43,7 +43,7 @@ class Map
   void generate() //to do
   {
     int x, y;
-    map[0][rows/2] = new Cat();
+    map[2][rows/2] = new Cat();
     
     if (isOutside)
     {
