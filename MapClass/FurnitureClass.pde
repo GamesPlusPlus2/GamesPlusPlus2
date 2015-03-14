@@ -1,6 +1,0 @@
-class Furniture
-{
-  void display()
-  {
-  }
-}

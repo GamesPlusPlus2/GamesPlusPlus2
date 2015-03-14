@@ -1,6 +1,0 @@
-class Human
-{
-  void display()
-  {
-  }
-}

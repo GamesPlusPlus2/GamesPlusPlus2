@@ -1,6 +1,0 @@
-class Tree
-{
-  void display()
-  {
-  }
-}

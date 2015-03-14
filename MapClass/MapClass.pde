@@ -1,7 +1,7 @@
 class Map
 {
   int cols, rows;
-  String[][] map;
+  Object[][] map;
   boolean isOutside = true;
   
   PImage ground;
@@ -12,7 +12,7 @@ class Map
   {
     cols = c;
     rows = r;
-    map = new String [cols] [rows];
+    map = new Object [cols] [rows];
     isOutside = o;
     
     if (isOutside)
@@ -27,7 +27,7 @@ class Map
     {
       for (int j = 0; i < rows; j++)
       {
-        map[i][j] = "ground";
+        map[i][j] = new Object();
       }
     }
     
@@ -55,11 +55,11 @@ class Map
     }
   }
   //won't ever be called outside this class
-  void displayOutside(String item)
+  void displayOutside(Object item)
   {
-    switch(item.charAt(0)) {
+    switch(item.charName) {
       case 'c':  //cat
-        Cat.display();
+        cat.display();
         break;
       case 't':  //tree
         tree.display();
@@ -82,9 +82,9 @@ class Map
     
   }
   //won't ever be called outside this class
-  void displayInside(String item)
+  void displayInside(Object item)
   {
-    switch(item.charAt(0)) {
+    switch(item.charName) {
       case 'c':  //cat
         cat.display();
         break;

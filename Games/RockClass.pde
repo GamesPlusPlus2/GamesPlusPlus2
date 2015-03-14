@@ -1,6 +1,0 @@
-class Rock
-{
-  void display()
-  {
-  }
-}

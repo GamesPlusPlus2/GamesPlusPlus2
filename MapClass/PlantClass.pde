@@ -1,6 +1,0 @@
-class Plant
-{
-  void display()
-  {
-  }
-}

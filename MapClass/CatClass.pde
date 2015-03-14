@@ -1,6 +1,0 @@
-class Cat
-{
-  void display()
-  {
-  }
-}
