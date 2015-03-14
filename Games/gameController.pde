@@ -1,5 +1,6 @@
 class GameController {
   Map gameMap;
+  String motion = "none";
   
   GameController() 
   {
@@ -7,9 +8,14 @@ class GameController {
     gameMap.generate();
   }
   
+  void input(String input) {
+   motion = input;
+  }
+  
   void run() {
     gameMap.display();
     gameMap.update();
+    
   }
 }
 
