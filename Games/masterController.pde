@@ -24,18 +24,21 @@ class MasterController {
   }
 
   void run() {
-    background(360);
+      background(0);
     switch(state) {
     case 0:
+
       mainMenu.display();
       setState(mainMenu.update());
       break;
       //gameState
       //change to 2 once cutscenes are thing
     case 1:
+      gameController.input(inputController.gameInput());
       gameController.run();
       print("test");
       musicController.gameMusic();
+      
       break;
     }
   }
