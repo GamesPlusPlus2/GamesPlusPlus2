@@ -1,6 +1,6 @@
 import ddf.minim.*;
 
-Minim soundtrack = new Minim(this);
+Minim soundtrack;
 
 MasterController masterController = new MasterController();
 
@@ -14,9 +14,24 @@ final int loseState = 5;
 int myWidth;
 int myHeight;
 
+//images
+PImage blank;
+PImage grassFloor;
+PImage woodFloor;
+PImage Bird;
+PImage Cat;
+PImage Chair;
+PImage Girl;
+PImage Mouse;
+PImage Plant;
+PImage Rock;
+PImage Tree;
+
 void setup() 
 {
+  soundtrack = new Minim(this);
   preferences();
+  loadImages();
 }
 
 void draw() 

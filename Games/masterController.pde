@@ -1,10 +1,10 @@
 class MasterController {
   int state;
-  int mainMenuState = 0;
   String gameName;
 
   MainMenu mainMenu;
   MusicController musicController;
+  InputController inputController;
 
   MasterController() {
     state = mainMenuState;

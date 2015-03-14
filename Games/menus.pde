@@ -8,7 +8,7 @@ void preferences()
 
 boolean buttonCenter(int x, int y, int w, int h) 
 {
-  if (x - w/2 < mouseX && mouseX < x + w/2 && y - h/2 < mouseY && mouseY < y + h/2) 
+  if (mousePressed && x - w/2 < mouseX && mouseX < x + w/2 && y - h/2 < mouseY && mouseY < y + h/2) 
   {
     return true;
   }
@@ -16,6 +16,20 @@ boolean buttonCenter(int x, int y, int w, int h)
   {
     return false;
   }
+}
+
+void loadImages() {
+  blank = loadImage("Object.png");
+  grassFloor = loadImage("Grass Floor 800x800.jpg");
+  woodFloor = loadImage("Wood Floor 800x800.jpg");
+  Bird = loadImage("Bird 100x100");
+  Cat = loadImage("Cat 100x100");
+  Chair = loadImage("Chair 100x100");
+  Girl = loadImage("Girl 100x100");
+  Mouse = loadImage("Mouse 100x100");
+  Plant = loadImage("Plant 100x100");
+  Rock = loadImage("Rock 100x100");
+  Tree = loadImage("Tree 100x100");
 }
 
 

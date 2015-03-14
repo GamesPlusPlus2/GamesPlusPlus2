@@ -8,17 +8,19 @@ class MusicController
   MusicController() 
   {
     //outside
-    musicPlayer[0][0] = soundtrack.loadFile("Laboratory.mp3");
-    musicPlayer[0][1] = soundtrack.loadFile("Easygoingness.mp3");
-    musicPlayer[0][2] = soundtrack.loadFile("Village.mp3");
-    musicPlayer[0][3] = soundtrack.loadFile("Over the sky.mp3");
-    musicPlayer[0][4] = soundtrack.loadFile("Noisy Times.mp3");
-    //inside
-    musicPlayer[1][0] = soundtrack.loadFile("The Limit.mp3");
-    musicPlayer[1][1] = soundtrack.loadFile("Precaution.mp3");
-    musicPlayer[1][2] = soundtrack.loadFile("OPERATION SKULD.mp3");
-    musicPlayer[1][3] = soundtrack.loadFile("Beginning of fight.mp3");
-    musicPlayer[1][4] = soundtrack.loadFile("Gate of Steiner.mp3");
+
+//    musicPlayer[0][0] = soundtrack.loadFile("Laboratory.mp3");
+//   musicPlayer[0][1] = soundtrack.loadFile("Easygoingness.mp3");
+//    musicPlayer[0][2] = soundtrack.loadFile("Village.mp3");
+//    musicPlayer[0][3] = soundtrack.loadFile("Over the sky.mp3");
+//    musicPlayer[0][4] = soundtrack.loadFile("Noisy Times.mp3");
+//        print("test");
+//    //inside
+//    musicPlayer[1][0] = soundtrack.loadFile("The Limit.mp3");
+//    musicPlayer[1][1] = soundtrack.loadFile("Precaution.mp3");
+//    musicPlayer[1][2] = soundtrack.loadFile("OPERATION SKULD.mp3");
+//    musicPlayer[1][3] = soundtrack.loadFile("Beginning of fight.mp3");
+//    musicPlayer[1][4] = soundtrack.loadFile("Gate of Steiner.mp3");
   }
 
   void enterArea() 
