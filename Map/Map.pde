@@ -8,7 +8,7 @@ class Map
   
    
   
-  Map(c, r, o)
+  Map(int c,int r,boolean o)
   {
     cols = c;
     rows = r;
