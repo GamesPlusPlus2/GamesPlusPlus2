@@ -3,6 +3,9 @@ class Map
   int cols, rows;
   String[][] map;
   boolean isOutside = true;
+  
+  PImage ground;
+  
    
   
   Map(c, r, o)
@@ -11,6 +14,13 @@ class Map
     rows = r;
     map = [cols] [rows];
     isOutside = o;
+    
+    if (isOutside)
+      ground = loadImage("Grass Floor 800x800.jpg");
+    else
+      ground = loadImage("Wood Floor 800x800.jpg");
+    
+    image(ground, 0, 0);
     
     //fills the map with a ground
     for (int i = 0; i < cols; i++)
@@ -24,12 +34,7 @@ class Map
   }
   //for the generation of random variables
   void generate()
-  {
-    if (isOutside)
-      //show grass
-    else
-      //show hardwood floor
-      
+  {      
     //implement random location items
       
   }
