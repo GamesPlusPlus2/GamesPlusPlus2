@@ -1,8 +1,9 @@
 class MusicController 
 {
-  
+
   AudioPlayer musicPlayerOutside1, musicPlayerOutside2, musicPlayerOutside3, musicPlayerOutside4, musicPlayerOutside5, musicPlayerInside1, musicPlayerInside2, musicPlayerInside3, musicPlayerInside4, musicPlayerInside5;
   boolean isOutside = false;
+  int seed = int(random(1, 5));
 
   MusicController() 
   {
@@ -18,52 +19,64 @@ class MusicController
     musicPlayerInside5 = soundtrack.loadFile("Gate of Steiner.mp3");
   }
 
+  void leaveArea() 
+  {
+    isOutside = !isOutside;
+    seed = int(random(1, 5));
+  }
   void run() 
   {
 
     if (isOutside == true)
     {
-      if (soundtrackRandomizerOutside == 1)
+      switch (seed) 
       {
+      case 1:
         musicPlayerOutside1.play();
-      }
-      if (soundtrackRandomizerOutside == 2)
-      {
+//        musicPlayerOutside1.rewind();
+        break;
+      case 2:
         musicPlayerOutside2.play();
-      }
-      if (soundtrackRandomizerOutside == 3)
-      {
+//        musicPlayerOutside2.rewind();
+        break;
+      case 3:
         musicPlayerOutside3.play();
-      }
-      if (soundtrackRandomizerOutside == 4)
-      {
+//        musicPlayerOutside3.rewind();
+        break;
+      case 4:
         musicPlayerOutside4.play();
-      }
-      if (soundtrackRandomizerOutside == 5)
-      {
+//        musicPlayerOutside4.rewind();
+        break;
+      case 5:
         musicPlayerOutside5.play();
+//        musicPlayerOutside5.rewind();
+        break;
       }
-    } else
+    } 
+    else
     {
-      if (soundtrackRandomizerInside == 1)
+      switch (seed)
       {
+      case 1:
         musicPlayerInside1.play();
-      }
-      if (soundtrackRandomizerInside == 2)
-      {
+//        musicPlayerInside1.rewind();
+        break;
+      case 2:
         musicPlayerInside2.play();
-      }
-      if (soundtrackRandomizerInside == 3)
-      {
+//        musicPlayerInside2.rewind();
+        break;
+      case 3:
         musicPlayerInside3.play();
-      }
-      if (soundtrackRandomizerInside == 4)
-      {
+//        musicPlayerInside3.rewind();
+        break;
+      case 4:
         musicPlayerInside4.play();
-      }
-      if (soundtrackRandomizerInside == 5)
-      {
+//        musicPlayerInside4.rewind();
+        break;
+      case 5:
         musicPlayerInside5.play();
+//        musicPlayerInside5.rewind();
+        break;
       }
     }
   }
