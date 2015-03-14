@@ -59,7 +59,7 @@ class Map
   {
     switch(item.charAt(0)) {
       case 'c':  //cat
-        cat.display();
+        Cat.display();
         break;
       case 't':  //tree
         tree.display();
@@ -94,7 +94,7 @@ class Map
       case 'm':  //mouse
         mouse.display();
         break;
-      case 'h':  //house
+      case 'h':  //human
         human.display();
         break;
       default: //should just be ground;
