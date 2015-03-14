@@ -1,4 +1,3 @@
-
 class Map
 {
   int cols, rows;
@@ -36,7 +35,6 @@ class Map
       for (int j = 0; j < rows; j++)
       {
         map[i][j] = new Tile();
-        //println(10*i+j);
       }
     }
     
@@ -44,12 +42,95 @@ class Map
 
   void generate() //to do
   {
+    int x, y;
     map[0][rows/2] = new Cat();
-//    int i =5;
-//     while ( i > 0)
-//    {
-//      i++;
-//    } 
+    
+    if (isOutside)
+    {
+      //trees
+      for(float amount = random(1, 5); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Tree();
+        }
+      }
+      //plants
+      for(float amount = random(1, 15); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Plant();
+        }
+      }
+      //birds
+      for(float amount = random(1, 10); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Bird();
+        }
+      }
+      //rocks
+      for(float amount = random(1, 10); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Rock();
+        }
+      }
+      //mice
+      for(float amount = random(1, 10); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Mouse();
+        }
+      }
+    }
+    else
+    {
+      //furniture
+      for(float amount = random(1, 5); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Furniture();
+        }
+      }
+      //mice
+      for(float amount = random(1, 10); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Mouse();
+        }
+      }
+      //humans
+      for(float amount = random(1, 3); amount >= 0; amount --)
+      {
+        x = (int) random(cols);
+        y = (int) random(rows);
+        if (map[x][y].charName == 'g')
+        {
+          map[x][y] = new Human();
+        }
+      }
+    }
   }
   void display()
   {
@@ -57,7 +138,7 @@ class Map
     {
       for (int j = 0; j < rows; j++)
       {
-        map[i][j].display(i, j); //displays each individual tile
+        map[i][j].display(i * width/cols, j * height/rows); //displays each individual tile
       }
     }
   }
@@ -94,9 +175,5 @@ class Map
       }
     }
   }
-  
-  
-    
-
 }
 
