@@ -1,54 +1,83 @@
-class Object
+class Tile
 {
   char charName;
-  void display()
+  //PImage picture;
+  
+  Tile()
   {
+    //picture = blank;
+  }
+  void display(int x, int y)
+  {
+    //image(picture, x, y);
   }
 }
 
-class Bird extends Object
+interface Moveable
+{
+  boolean moveUp = false;
+  boolean moveDown = false;
+  boolean moveLeft = false;
+  boolean moveRight = false;
+  
+  void move(); //should change the move variables
+}
+
+class Bird extends Tile implements Moveable
 {
   Bird()
   {
     charName = 'b';
   }
+  void move()
+  {
+  }
   
 }
 
-class Cat extends Object
+class Cat extends Tile implements Moveable
 {
   Cat()
   {
     charName = 'c';
   }
-  
+  void move()
+  {
+  }
 }
 
-class Furniture extends Object
+class Furniture extends Tile
 {
   Furniture()
   {
     charName = 'f';
   }
+
 }
 
-class Human extends Object
+class Human extends Tile implements Moveable
 {
   Human()
   {
     charName = 'h';
   }
+  void move()
+  {
+  }
 }
 
-class Mouse extends Object
+class Mouse extends Tile implements Moveable
 {
   Mouse()
   {
     charName = 'm';
   }
+  void move()
+  {
+  }
 }
 
-class Plant extends Object
+class Plant extends Tile
 {
   Plant()
   {
@@ -56,7 +85,7 @@ class Plant extends Object
   }
 }
 
-class Rock extends Object
+class Rock extends Tile
 {
   Rock()
   {
@@ -64,7 +93,7 @@ class Rock extends Object
   }
 }
 
-class Tree extends Object
+class Tree extends Tile
 {
   Tree()
   {
