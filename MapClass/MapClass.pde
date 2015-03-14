@@ -7,12 +7,12 @@ class Map
   PImage ground;
   
    
-  
+  //constructor
   Map(int c,int r,boolean o)
   {
     cols = c;
     rows = r;
-    map = [cols] [rows];
+    map = new String [cols] [rows];
     isOutside = o;
     
     if (isOutside)
@@ -55,25 +55,25 @@ class Map
     }
   }
   //won't ever be called outside this class
-  void displayOutside(item)
+  void displayOutside(String item)
   {
-    switch(item) {
-      case "cat":
+    switch(item.charAt(0)) {
+      case 'c':  //cat
         cat.display();
         break;
-      case "tree":
+      case 't':  //tree
         tree.display();
         break;
-      case "plant":
+      case 'p':  //plant
         plant.display();
         break;
-      case "bird":
+      case 'b':  //bird
         bird.display();
         break;
-      case "rock":
+      case 'r':  //rock
         rock.display();
         break;
-      case "mouse":
+      case 'm':  //mouse
         mouse.display();
         break;
       default: //should just be ground
@@ -82,19 +82,19 @@ class Map
     
   }
   //won't ever be called outside this class
-  void displayInside(item)
+  void displayInside(String item)
   {
-    switch(item) {
-      case "cat":
+    switch(item.charAt(0)) {
+      case 'c':  //cat
         cat.display();
         break;
-      case "furniture":
+      case 'f':  //furniture
         furniture.display();
         break;
-      case "mouse":
+      case 'm':  //mouse
         mouse.display();
         break;
-      case "human":
+      case 'h':  //house
         human.display();
         break;
       default: //should just be ground;
