@@ -51,7 +51,11 @@ class Cat extends Tile implements Moveable
   }
   void move()
   {
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> parent of a7adfcd... Revert "ehg;vlrhdnyirkhgor"
   }
 }
 

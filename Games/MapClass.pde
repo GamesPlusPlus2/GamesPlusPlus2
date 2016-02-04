@@ -43,7 +43,11 @@ class Map
   void generate() //to do
   {
     int x, y;
+<<<<<<< HEAD
     map[0][rows/2] = new Cat();
+=======
+    map[8][rows/2] = cat;
+>>>>>>> parent of a7adfcd... Revert "ehg;vlrhdnyirkhgor"
     
     if (isOutside)
     {
@@ -138,7 +142,11 @@ class Map
     {
       for (int j = 0; j < rows; j++)
       {
+<<<<<<< HEAD
         map[i][j].display(i * width/cols, j * height/rows); //displays each individual tile
+=======
+        map[i][j].display(i, j); //displays each individual tile
+>>>>>>> parent of a7adfcd... Revert "ehg;vlrhdnyirkhgor"
       }
     }
   }
